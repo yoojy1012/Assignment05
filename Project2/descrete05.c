@@ -13,3 +13,8 @@ int sum(int* pNumbers, int nIndex)
 		return pNumbers + sum(pNumbers, nIndex);
 	}
 }
+
+int main(int argc, char* argv)
+{
+
+}
