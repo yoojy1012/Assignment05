@@ -11,10 +11,23 @@ int sum(int* pNumbers, int nIndex)
 	else
 	{
 		return pNumbers + sum(pNumbers, nIndex);
+		nIndex--;
 	}
 }
 
-int main(int argc, char* argv)
+int main(int argc, char* argv[])
 {
+	FILE* fp1, * fp2;
+	char str[100];
 
-}
+	fp1 = fopen(argv[1], "r");
+	fp2 = fopen(argv[2], "w");
+
+	if (fp1 == NULL) {
+		printf("fail to open file.");
+		return 0;
+	}
+	if (fp2 == NULL) {
+		printf("fail to create file for write.");
+		return 0;
+	}
